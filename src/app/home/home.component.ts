@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getNews().subscribe((data)=>{
       console.log(data);
-      //this.data = data['articles'];
+      this.data = data['articles'];
     });
   }
 

@@ -11,6 +11,6 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   getNews(){
-    return this.httpClient.get(`https://newsapi.org/v2/everything?q=DevOps&sortBy=popularity&apiKey=${this.API_KEY}`);
+    return this.httpClient.get<any>(`https://newsapi.org/v2/everything?q=DevOps&sortBy=popularity&apiKey=${this.API_KEY}`);
   }
 }
